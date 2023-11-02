@@ -3,9 +3,7 @@ import {useState} from 'react'
 import './App.scss'
 
 function App() {
-  const [formData, setFormData] = useState({
-    user: '', psswd: '', psswdAgain: ''
-  })
+  const [formData, setFormData] = useState({user: '', psswd: '', psswdRepeat: ''})
 
   return (
     <>

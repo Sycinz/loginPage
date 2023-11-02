@@ -1,13 +1,12 @@
-import {useState} from 'react'
-import Section from './Section'
+import Form from './Form'
 import './App.scss'
 
 function App() {
 
   return (
-    <div>
-      <Section />
-    </div>
+    <>
+      <Form />
+    </>
   )
 }
 

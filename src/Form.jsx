@@ -1,11 +1,6 @@
 function Form(props) {
     const {formData, setFormData} = props
 
-    // Saving login data in sessionStorage
-    Object.keys(formData).map(v => {
-        sessionStorage.setItem(formData[v], v)
-    })
-
     // handling subnmit <button>
     const handleSubmit = (event) => {
         const {name, value} = event.target
@@ -13,6 +8,11 @@ function Form(props) {
 
     // handler that changes formData object value on every change
     const handleChange = (event) => {
+        // Saving login data in sessionStorage
+        Object.keys(formData).map(v => {
+            sessionStorage.setItem(formData[v], v)
+        })
+
         const {id, value} = event.target
 
     // setting previous formData state + overwriting new values 

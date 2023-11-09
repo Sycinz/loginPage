@@ -1,4 +1,6 @@
+import Nav from './Nav'
 import Form from './Form'
+import Footer from './Footer'
 import {useState} from 'react'
 import './App.scss'
 
@@ -7,10 +9,12 @@ function App() {
 
   return (
     <>
+      <Nav />
       <Form 
         formData={formData}
         setFormData={setFormData}  
       />
+      <Footer />
     </>
   )
 }

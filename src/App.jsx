@@ -1,6 +1,6 @@
-import Nav from './Nav'
-import Form from './Form'
-import Footer from './Footer'
+import Nav from './components/Nav'
+import Form from './components/Form'
+import Footer from './components/Footer'
 import {useState} from 'react'
 import './App.scss'
 

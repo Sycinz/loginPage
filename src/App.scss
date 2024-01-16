@@ -71,6 +71,12 @@ button {
     border: 2px solid $fourthColor;
 }
 
+@media (max-width: 1280px) {
+    form {
+        width: 45%;
+    }
+}
+
 @media (max-width: 720px) {
     #root {
         min-height: 120vh;

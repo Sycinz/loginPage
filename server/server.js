@@ -12,7 +12,7 @@ app.get('/api', (req, res) => {
 })
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, `../client/index.html`))
+    res.sendFile(`index.html`)
 })
 
 app.listen(5000, () => {

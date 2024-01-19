@@ -1,11 +1,22 @@
 import Nav from './components/Nav'
 import Form from './components/Form'
 import Footer from './components/Footer'
-import {useState} from 'react'
+import {useState, useEffect } from 'react'
 import './App.scss'
 
 function App() {
   const [formData, setFormData] = useState({user: '', psswd: '', psswdRepeat: ''})
+  const [backendData, setBackendData] = useState([{}])
+
+  useEffect(() => {
+    fetch("/api").then(
+      response => response.json()
+    ).then(
+      data => {
+        setBackendData(data)
+      }
+    )
+  }, [])
 
   return (
     <>

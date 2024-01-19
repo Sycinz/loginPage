@@ -3,7 +3,7 @@ import express from 'express'
 const app = express()
 
 app.get('/', (req, res) => {
-    res.sendFile(`~/Code/React/loginPage/index.html`)
+    res.send("Hello from node.js!")
 })
 
 app.listen(8000, () => {

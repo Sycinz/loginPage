@@ -2,10 +2,10 @@ import express from 'express'
 
 const app = express()
 
-app.get('/', (req, res) => {
-    res.send("Hello from node.js!")
+app.get('/api', (req, res) => {
+    res.json({ "users": ["userOne", "userTwo", "userThree"] })
 })
 
-app.listen(8000, () => {
-    console.log('Server listens on 8000')
+app.listen(5000, () => {
+    console.log('Server listens on 5000')
 })

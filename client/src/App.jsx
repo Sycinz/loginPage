@@ -1,12 +1,12 @@
-// import Nav from './components/Nav'
-// import Form from './components/Form'
-// import Footer from './components/Footer'
+import Nav from './components/Nav'
+import Form from './components/Form'
+import Footer from './components/Footer'
 import {useState, useEffect } from 'react'
 import './App.scss'
 
 function App() {
-  // const [formData, setFormData] = useState({user: '', psswd: '', psswdRepeat: ''})
-  const [backendData, setBackendData] = useState([{}])
+  const [formData, setFormData] = useState({user: '', psswd: '', psswdRepeat: ''})
+  // const [backendData, setBackendData] = useState([{}])
 
   useEffect(() => {
     fetch("/api").then(
@@ -19,19 +19,14 @@ function App() {
   }, [])
 
   return (
-    <div>
-      {/* <Nav />
+    <>
+      <Nav />
       <Form 
         formData={formData}
         setFormData={setFormData}  
-      /> */}
-      { (typeof backendData.users === `undefined`) ? (
-      <p>Loading ...</p> ) : (
-        backendData.users.map((user, i) => (
-        <p key={i}>{user}</p>
-        )))}
-      {/* <Footer /> */}
-    </div>
+      />
+      <Footer />
+    </>
   )
 }
 

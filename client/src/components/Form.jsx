@@ -1,3 +1,5 @@
+import { FaUser, FaLock } from "react-icons/fa";
+
 function Form(props) {
     const {formData, setFormData} = props
 
@@ -30,10 +32,10 @@ function Form(props) {
 
     return (
         <form name="form" onSubmit={handleSubmit}>
+            <h1>Login page</h1>
             <div className="inputs">
-                <input id="user" onChange={handleChange} type="text" value={formData.user} />
-                <input id="psswd" onChange={handleChange} type="password" value={formData.psswd} />
-                <input id="psswdRepeat" onChange={handleChange} type="password" value={formData.psswdRepeat} />
+                <FaUser /><input id="user" onChange={handleChange} type="text" value={formData.user} />
+                <FaLock /><input id="psswd" onChange={handleChange} type="password" value={formData.psswd} />
             </div>
             <button>Login</button>
         </form>

@@ -1,4 +1,4 @@
-![Website look](/RepoIMGS/Website_look.png)
+![Website look](/RepoIMGS/loginPage.jpg)
 
 # Login Page made by Sycinz
 

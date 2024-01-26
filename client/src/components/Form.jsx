@@ -34,8 +34,12 @@ function Form(props) {
         <form name="form" onSubmit={handleSubmit}>
             <h1>Login page</h1>
             <div className="inputs">
-                <FaUser /><input id="user" onChange={handleChange} type="text" value={formData.user} />
-                <FaLock /><input id="psswd" onChange={handleChange} type="password" value={formData.psswd} />
+                <div className="inputs-container">
+                    <FaUser className="icon" id="user" /><input id="user" onChange={handleChange} type="text" value={formData.user} />
+                </div>
+                <div className="inputs-container">
+                    <FaLock className="icon" id="lock" /><input id="psswd" onChange={handleChange} type="password" value={formData.psswd} />
+                </div>
             </div>
             <button>Login</button>
         </form>
